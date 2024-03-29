@@ -121,9 +121,7 @@ RAM 8 Gb;
 
 ### Шаг 3. Установка и настройка БД - mongodb
 
-1. [Linux] На сервере БД выполните команду `grep avx /proc/cpuinfo`. Если в ответе вы не видите AVX, то вам лучше
-   выбрать версию mongodb < 5.х, например, 4.4
-   если AVX на вашем сервере поддерживается, рекомендуется выбрать версию mongodb > 5.х.
+1. [Linux] Обратите внимание что необходимо использовать версию mongodb > 5.х.
 
 2. Запустить mongodb, например, используя yml файл ниже, предварительно указав ваш пароль `root` в
    параметре `setrootpassword`
@@ -192,7 +190,7 @@ mongosh -u root -p password
 ```
 Current Mongosh Log ID:	65c5d795e6d642628b94ece4
 Connecting to:		mongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.5.0
-Using MongoDB:		4.4.15
+Using MongoDB:		5.0
 Using Mongosh:		1.5.0
 
 For mongosh info see: https://docs.mongodb.com/mongodb-shell/
